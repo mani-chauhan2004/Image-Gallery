@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./responsive_media.css">
+    <title>responsive_media</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+
+body{
+    background-image: radial-gradient(#00151f, #000608);
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+}
+
+.nav-bar{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    
+}
+
+.logo{
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+    cursor: default;
+}
+
+.logo:hover{
+    color: #13AAE9;
+}
+
+.nav-elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    .menu{
+        display: block;
+        background-color: #13AAE9;
+        padding: 6px 10px 6px 10px;
+        border-radius: 24px;
+        border: 2px solid #00b3ff;
+    }
+
+    .normal, .subscribe{
+        display: none;
+    }
+
+    .menu:hover{
+        box-shadow: 1px 1px #00b3ff;
+    }
+
+}
+
+.normal:hover{
+    color: #00b3ff;
+}
+
+.subscribe{
+    background-color: #13AAE9;
+    padding: 6px 10px 6px 10px;
+    border-radius: 24px;
+    border: 2px solid #00b3ff;
+}
+
+.subscribe:hover{
+    box-shadow: 1px 1px #00b3ff;
+}
+
+.main-content{
+    height: 100%;
+    width: 100%;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px){
+    .hero{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+}
+
+.explore-image>img{
+    height: 90vh;
+}
+
+.explore{
+    height: 60vh;
+    font-size: 10vw;
+    padding: 2%;
+    background-image: radial-gradient(#00151f, #000608);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    
+}
+
+@media screen and (max-width:768px){
+    .explore{
+        font-size: 3em;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .explore-image>img{
+        width: 100%;
+        align-content: center;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+    .hero{
+        justify-content: center;
+
+    }
+
+    .explore{
+        font-size: 6em;
+    }
+
+}
+
+@media screen and (max-width:1020px){
+    .hero{
+        justify-content: center;
+
+    }
+
+    .explore{
+        font-size: 5em;
+    }
+
+}
+
+@media screen and (max-width:900px){
+    .hero{
+        justify-content: center;
+
+    }
+
+    .explore{
+        font-size: 3em;
+    }
+
+}
+
+.trends{
+    display: flex;
+    position: relative;
+    top: 4em;
+    width: 100%;
+    align-items: center;
+    border: 8px solid white;
+    border-right: transparent;
+    border-left: transparent;
+    justify-content: center;
+}
+
+.trends>h1{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 10em;
+}
+
+@media screen and (max-width:768px){
+    .trends>h1{
+        font-size: 5em;
+    }
+
+}
+
+.gallery{
+    display: grid;
+    position: relative;
+    top: 8em;
+    width: 90%;
+    gap: 1em;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.columns{
+    overflow: hidden;
+    aspect-ratio: 5/8;
+    align-content: center;
+}
+.normal-images{
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale();
+}
+
+.normal-images:hover{
+    filter: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.credits{
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.credits-para{
+    color: white;
+    font-size: 1em;
+    line-height: 25px;
+    text-align: center;
+}
+
+footer{
+    position: relative;
+    top: 10em;
+    width: 100%; 
+    color: black; 
+    align-content: center;  
+}
+
+article{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+footer>article>header{
+    text-align: center;
+    color: white;
+}
+
+footer>article>p{
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width:768px){
+    footer>article>heeader{
+        font-size: 0.8em;
+    }
+
+    footer>article>p{
+        font-size: .5em;
+    }
+
+    .credits{
+        position: relative;
+        top: 1em;
+        text-align: center;
+    }
+    
+    .credits-para{
+        color: white;
+        font-size: .5em;
+        line-height: 16px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    footer>article>heeader{
+        font-size: 0.6em;
+    }
+
+    footer>article>p{
+        font-size: .4em;
+    }
+
+    .credits{
+        position: relative;
+        top: 1em;
+        text-align: center;
+    }
+    
+    .credits-para{
+        color: white;
+        font-size: .4em;
+        line-height: 16px;
+        text-align: center;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+    <section class="nav-container">
+        <nav class="nav-bar">
+            <div class="logo">
+                <span>Gallery</span>
+            </div>
+
+            <div class="nav-elements">
+                <span class="menu">G</span>
+                <span class="normal">About</span>
+                <span class="subscribe">Subscribe</span>
+            </div>
+        </nav>
+    </section>
+    
+    <main class="main-content">
+        <section class="hero">
+            <div class="explore">
+                <h1>Explore</h1>
+                <h1>Channels</h1>
+            </div>
+
+            <div class="explore-image">
+                <img src="./IMG/explore_image.png" alt="">
+            </div>
+        </section>
+
+        <section class="trends">
+            <h1>Trends</h1>
+        </section>
+
+        <section class="gallery">
+            <div class="columns columns1">
+                <img class="normal-images" src="./IMG/30+ Sizzling Summer Wallpapers For iPhones_ Get The Vibe For Your Lock Screen (1).jpg" alt="">
+            </div>
+            <div class="columns columns2">
+                <img class="normal-images" src="./IMG/999,300+ Forest Path Stock Photos, Pictures & Royalty-Free Images.jpg" alt="">
+            </div>
+            <div class="columns columns3">
+                <h2 class="credits">Credits</h2>
+                <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+            </div>
+            <div class="columns columns4">
+                <h2 class="credits">Credits</h2>
+                <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+            </div>
+            <div class="columns columns5">
+                <img class="normal-images" src="./IMG/dbfed0fe-c90a-49a8-88d3-eda061e670b5.jpg" alt="">
+            </div>
+            <div class="columns columns6">
+                <img class="normal-images" src="./IMG/aef5648e-8f70-457f-a3d6-7133acf48b07.jpg" alt="">
+            </div>
+            <div class="columns columns7">
+                <img class="normal-images" src="./IMG/ebf645e8-e531-4a61-be4d-a05934eb740e.jpg" alt="">
+            </div>
+            <div class="columns columns8">
+                <img class="normal-images" src="./IMG/snow white and the seven dwarfs_ disney….jpg" alt="">
+            </div>
+            <div class="columns columns9">
+                <h2 class="credits">Credits</h2>
+                <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+            </div>
+            <div class="columns columns10">
+                <h2 class="credits">Credits</h2>
+                <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+            </div>
+            <div class="columns columns11">
+                <img class="normal-images" src="./IMG/Wallpaper forest.jpg" alt="">
+            </div>
+            <div class="columns columns12">
+                <img class="normal-images" src="./IMG/Tales in spring- AI art by Ephellem (1).jpg" alt="">
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <article>
+            <header>
+                <h1>Copyright © 2010 by M_G Gallery</h1>
+            </header>
+            
+            <p>
+                All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law. For permission requests, write to the publisher, addressed “Attention: Permissions Coordinator,” at the address below.
+
+            </p>
+
+            <p>
+                Imaginary Press <br>
+                12324 Civil Lines, New Delhi <br>
+                India
+                <br>
+                www.imaginarypress.com
+            </p>
+        </article>
+    </footer>
+</body>
+</html>

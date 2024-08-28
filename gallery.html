@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./gallery.css">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: default;
+        }
+
+
+        body{
+            background-image: radial-gradient(#00151f, #000608);
+        }
+
+        .nav-container{
+            display: flex;
+            flex-direction: column;
+            height: 15vh;
+        }
+
+        .nav-bar{
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 20px 0px 30px;
+        }
+
+        .logo{
+            color: white;
+            font-weight: 900;
+            font-size: 2em;
+            cursor: default;
+        }
+
+        .logo:hover{
+            color: #13AAE9;
+        }
+
+        .nav-elements{
+            display: flex;
+            width: 15%;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+        }
+
+        .normal:hover{
+            color: #00b3ff;
+        }
+
+        .subscribe{
+            background-color: #13AAE9;
+            padding: 6px 10px 6px 10px;
+            border-radius: 24px;
+            border: 2px solid #00b3ff;
+        }
+
+        .subscribe:hover{
+            box-shadow: 1px 1px #00b3ff;
+        }
+
+        .main-content{
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .explore-image>img{
+            height: 100vh;
+        }
+
+        .explore{
+            height: 60vh;
+            font-size: 10vw;
+            height: 90vh;
+            padding: 2%;
+            background-image: radial-gradient(#00151f, #000608);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            color: white;
+            
+        }
+
+        .trends{
+            display: flex;
+            height: 30vh;
+            width: 100%;
+            align-items: center;
+            margin: auto;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            border: 8px solid white;
+            border-right: transparent;
+            border-left: transparent;
+            justify-content: center;
+        }
+
+        .trends>h1{
+            color: white;
+            letter-spacing: 5px;
+            font-size: 20vh;
+        }
+
+        .gallery{
+            width: 90vw;   
+            height: 200vh; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rows{
+            width: 100%;
+        }
+
+        .columns{
+            width: 10vw;
+            height: 30vw;
+            border: 4px solid black;
+        }
+
+        .columns>img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+
+        .columns>img:hover{
+            filter: none;
+            transition: all .5s ease-in-out;
+        }
+
+        .info{
+            padding: 20px;
+        }
+
+        .credits{
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .credits-para{
+            color: white;
+            font-size: 1em;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        .bottom-bar{
+            height: 20vh;
+            width: 100%;
+        }
+
+        .bottom-bar>.columns{
+            height: 100%;
+        }
+
+        footer{
+            height: 40vh;
+            width: 100%; 
+            color: black; 
+            align-content: center;  
+
+        }
+
+        article{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        footer>article>header{
+            text-align: center;
+            color: white;
+        }
+
+        footer>article>p{
+            text-align: center;
+            color: white;
+}
+
+    </style>
+</head>
+<body>
+    <section class="nav-container">
+        <nav class="nav-bar">
+            <div class="logo">
+                <span>Gallery</span>
+            </div>
+
+            <div class="nav-elements">
+                <span class="normal">About</span>
+                <span class="subscribe">Subscribe</span>
+            </div>
+        </nav>
+    </section>
+    
+    <main class="main-content">
+        <section class="hero">
+            <div class="explore">
+                <h1>Explore</h1>
+                <h1>Channels</h1>
+            </div>
+
+            <div class="explore-image">
+                <img src="./IMG/explore_image.png" alt="">
+            </div>
+        </section>
+
+        <section class="trends">
+            <h1>Trends</h1>
+        </section>
+
+        <table class="gallery">
+            <tr class="row-1 rows">
+                <td colspan="3" class="column1-1 columns">
+                    <img src="./IMG/30+ Sizzling Summer Wallpapers For iPhones_ Get The Vibe For Your Lock Screen (1).jpg" alt="">
+                </td>
+                <td colspan="3" class="column1-2 columns">
+                    <img src="./IMG/999,300+ Forest Path Stock Photos, Pictures & Royalty-Free Images.jpg" alt="">
+                </td>
+                <td class="info" colspan="4">
+                    <h2 class="credits">Credits</h2>
+                    <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+                </td>
+            </tr>
+            <tr class="row-2 rows">
+                <td colspan="4" class="columns">
+                    <h2 class="credits">Credits</h2>
+                    <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+                </td>
+                <td colspan="3" class="column2-1 columns">
+                    <img src="./IMG/dbfed0fe-c90a-49a8-88d3-eda061e670b5.jpg" alt="">
+                </td>
+                <td colspan="3" class="column2-2 columns">
+                    <img src="./IMG/aef5648e-8f70-457f-a3d6-7133acf48b07.jpg" alt="">
+                </td>
+                
+            </tr>
+            <tr class="row-3 rows">
+                <td colspan="3" class="column3-1 columns">
+                    <img src="./IMG/ebf645e8-e531-4a61-be4d-a05934eb740e.jpg" alt="">
+                </td>
+                <td colspan="3" class="column3-2 columns">
+                    <img src="./IMG/snow white and the seven dwarfs_ disney….jpg" alt="">
+                </td>
+                <td colspan="4" class="columns">
+                    <h2 class="credits">Credits</h2>
+                    <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+                </td>
+            </tr>
+            <tr class="row-4 rows">
+                <td colspan="4" class="columns">
+                    <h2 class="credits">Credits</h2>
+                    <p class="credits-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi, atque soluta unde doloribus aliquid ab, quo rem eius enim dolorem. Dolorem quis non nulla necessitatibus magnam hic possimus eveniet?</p>
+                </td>
+                <td colspan="3" class="column4-1 columns">
+                    <img src="./IMG/Wallpaper forest.jpg" alt="">
+                </td>
+                <td colspan="3" class="column4-2 columns">
+                    <img src="./IMG/Tales in spring- AI art by Ephellem (1).jpg" alt="">
+                </td>
+            </tr>
+            
+
+            <tr class="row-5 rows bottom-bar">
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/0db92b8f-b688-4c20-9491-3d2f48ed1434.jpg" alt="image-1">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/12 Best Hikes In Washington State, USA.jpg" alt="image-2">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/3d098fb9-52df-4733-acd8-d29a477519c3.jpg" alt="image-3">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/d59863f2-32d4-4c2f-8415-9d9494279a3a.jpg" alt="image-4">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/Desert darlin’ says, take me back to the green_.jpg" alt="image-5">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/ferns in a sea of blue.jpg" alt="image-6">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/Land of the Sky_ 13 Best Hikes Near Asheville, NC.jpg" alt="image-7">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/Photo by Degleex Ganzorig on Unsplash.jpg" alt="image-8">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/Premium Photo _ Background of tropical rain forest.jpg" alt="image-9">
+                </td>
+                <td class="columns">
+                    <img src="./IMG/bottom_bar/Temperate Rainforest.jpg" alt="image-10">
+                </td>
+            </tr>
+        </table>
+        
+    </main>
+
+    <footer>
+        <article>
+            <header>
+                <h1>Copyright © 2010 by M_G Gallery</h1>
+            </header>
+            
+            <p>
+                All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law. For permission requests, write to the publisher, addressed “Attention: Permissions Coordinator,” at the address below.
+
+            </p>
+
+            <p>
+                Imaginary Press <br>
+                12324 Civil Lines, New Delhi <br>
+                India
+                <br>
+                www.imaginarypress.com
+            </p>
+        </article>
+    </footer>
+</body>
+</html>
